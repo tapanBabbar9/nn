@@ -17,12 +17,8 @@ This will install the necessary packages, including Jupyter Notebook and NumPy.
 **Usage**
 ================================
 
-To run the models, navigate to the relevant folder (e.g., `Transformer`, `GRU`, etc.) and open the `.ipynb` file in a Jupyter Notebook. Each notebook contains code cells that can be executed by running the cell or Shift+Enter.
+To run the models, navigate to the relevant folder (e.g., `LSTM`, `GRU`, etc.) and open the `.ipynb` file in a Jupyter Notebook. Each notebook contains code cells that can be executed by running the cell or Shift+Enter.
 
-Some notable files:
-
-* `ds.ipynb`: A notebook containing data preprocessing and model training scripts.
-* `runs`: A folder containing trained models and their respective checkpoint files.
 
 **Contribution Guidelines**
 ================================
