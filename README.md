@@ -1,49 +1,57 @@
 Here is a detailed README file for the project:
 
 **Overview**
-================================
+=====================================================================
 
-Welcome to `nn`, a repository containing various deep learning models and scripts for experimenting with different neural network architectures. The repository is structured into folders, each representing a specific type of model (Transformer, GRU, LSTM, RNN). This README file provides an overview of the project, installation instructions, usage guidelines, and contribution guidelines.
+This repository contains implementations of various neural network architectures, including Transformer, GRU, LSTM, and RNN models. The goal of this project is to provide a comprehensive collection of deep learning algorithms in Python using popular libraries such as Jupyter Notebook.
 
 **Installation**
-================================
+=====================================================================
 
-To use this project, you'll need to have Python installed on your machine. You can install the required dependencies by running the following command:
-```bash
-pip install -r requirements.txt
-```
-This will install the necessary packages, including Jupyter Notebook and NumPy.
+To use this project, you'll need to install the required dependencies. Here are the steps:
+
+1. Clone the repository: `git clone https://github.com/tapanBabbar9/nn.git`
+2. Install the necessary packages:
+	* Jupyter Notebook: `pip install jupyter`
+	* TensorFlow (or other deep learning libraries): `pip install tensorflow` (or substitute with your preferred library)
+3. Run Jupyter Notebook: `jupyter notebook`
 
 **Usage**
-================================
+=====================================================================
 
-To run the models, navigate to the relevant folder (e.g., `LSTM`, `GRU`, etc.) and open the `.ipynb` file in a Jupyter Notebook. Each notebook contains code cells that can be executed by running the cell or Shift+Enter.
+Once you have installed the dependencies, you can run the notebooks in the following folders:
 
+1. **Transformer**: This folder contains implementations of Transformer models.
+2. **GRU**, **LSTM**, and **RNN**: These folders contain implementations of GRU, LSTM, and RNN models respectively.
+3. **Micrograd**: This folder contains micro-optimizations for backpropagation.
+
+Each notebook in these folders is designed to demonstrate a specific neural network architecture. You can run each notebook individually by clicking on the "Run" button in Jupyter Notebook.
 
 **Contribution Guidelines**
-================================
+=====================================================================
 
-If you'd like to contribute to this project, please follow these guidelines:
+We welcome contributions to this project! If you'd like to add a new neural network architecture or improve an existing one, please follow these guidelines:
 
-1. Fork the repository: Create a copy of the repository on your own GitHub account.
-2. Create a new branch: In your forked repository, create a new branch for your changes (e.g., `feature/new-model`).
-3. Make changes: Implement your desired changes in the relevant notebook or script.
-4. Commit and push: Commit your changes and push them to your forked repository.
-5. Open a pull request: Create a pull request from your forked repository to this original repository.
+1. Create a new branch: `git checkout -b <branch-name>`
+2. Make your changes and commit them: `git add .` and `git commit -m "Added new feature"`
+3. Push your changes: `git push origin <branch-name>`
+4. Open a pull request: Go to the repository's main page, click on the "Pull requests" tab, and create a new pull request.
 
 **Repo Links**
-================================
+=====================================================================
 
-Here are some helpful links related to this project:
+Here are some useful links for this project:
 
 * Repository URL: https://github.com/tapanBabbar9/nn
-* Issues page: https://github.com/tapanBabbar9/nn/issues
-* Wiki (coming soon!): TBA
+* Issues: https://github.com/tapanBabbar9/nn/issues
+* Wiki: (none)
 
 **License**
-================================
+=====================================================================
 
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
 
-I hope this helps! Let me know if you have any questions or need further assistance.
+By contributing to this project, you agree to abide by the terms of the MIT License.
+
+Thank you for your interest in this project!
 
