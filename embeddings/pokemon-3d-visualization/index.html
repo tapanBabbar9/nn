@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Pokémon t-SNE Visualization</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    #myDiv {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="myDiv"></div>
+
+  <script>
+    // Fetch the CSV data
+    fetch('pokemon_tsne_data.csv') // Ensure this path is correct
+      .then(response => response.text())
+      .then(data => {
+        const rows = data.split('\n').slice(1); // Skip header
+        const x = [];
+        const y = [];
+        const z = [];
+        const text = [];
+
+        // Parse CSV rows
+        rows.forEach(row => {
+          const cols = row.split(',');
+          if (cols.length === 4) { // Expecting 4 columns: Component 1, Component 2, Component 3, Pokémon
+            x.push(parseFloat(cols[0]));
+            y.push(parseFloat(cols[1]));
+            z.push(parseFloat(cols[2]));
+            text.push(cols[3]);
+          }
+        });
+
+        // Create the 3D scatter plot
+        const trace = {
+          x: x,
+          y: y,
+          z: z,
+          mode: 'markers+text',
+          marker: {
+            size: 5, // Marker size
+            color: 'rgb(23, 190, 207)', // Customize color
+            opacity: 0.8,
+          },
+          text: text,
+          type: 'scatter3d',
+          textposition: 'top center',
+        };
+
+        const layout = {
+          autosize: true,
+          title: '3D t-SNE of Pokémon Name Embeddings',
+          scene: {
+            aspectratio: {
+              x: 1,
+              y: 1,
+              z: 1
+            },
+            camera: {
+              center: {
+                x: 0,
+                y: 0,
+                z: 0
+              },
+              eye: {
+                x: 1.25,
+                y: 1.25,
+                z: 1.25
+              },
+              up: {
+                x: 0,
+                y: 0,
+                z: 1
+              }
+            },
+            xaxis: {
+              type: 'linear',
+              zeroline: false
+            },
+            yaxis: {
+              type: 'linear',
+              zeroline: false
+            },
+            zaxis: {
+              type: 'linear',
+              zeroline: false
+            }
+          },
+
+          margin: {
+            l: 0,
+            r: 0,
+            b: 0,
+            t: 40,
+            pad: 0,
+          },
+
+        };
+
+        // Ensure the 3D plot is rendered
+        Plotly.newPlot('myDiv', [trace], layout);
+      })
+      .catch(error => console.error('Error loading the CSV file:', error));
+  </script>
+</body>
+
+</html>
