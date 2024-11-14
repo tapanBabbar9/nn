@@ -4,7 +4,7 @@ import torch.nn.functional as F
 import matplotlib.pyplot as plt
 
 # Load the saved model parameters
-loaded_variables = torch.load("model_parameters.pth")
+loaded_variables = torch.load("llm-from-scratch/model_parameters.pth")
 
 # Extract each component
 C = loaded_variables["C"]
