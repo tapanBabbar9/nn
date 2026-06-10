@@ -162,3 +162,28 @@ cython_debug/
 #.idea/
 
 .DS_Store
+
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Model weights & training outputs
+outputs/
+*.safetensors
+*.bin
+checkpoint-*/
+
+# Hugging Face cache (optional — uncomment to ignore)
+# .cache/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Copyrighted book text — add locally, never commit
+embeddings/got/dataset/*ssb.txt

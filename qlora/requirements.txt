@@ -1,0 +1,21 @@
+# Core ML stack
+torch>=2.1.0
+transformers>=4.44.0
+datasets>=2.18.0
+accelerate>=0.27.0
+
+# PEFT (LoRA adapters)
+peft>=0.11.0
+
+# QLoRA (4-bit quantization) — requires CUDA on Linux; works on Apple Silicon with MPS for LoRA-only
+bitsandbytes>=0.43.0; sys_platform != "darwin"
+
+# Training utilities
+trl>=0.9.0
+sentencepiece>=0.2.0
+protobuf>=4.25.0
+
+# Optional: progress bars, eval
+tqdm>=4.66.0
+scikit-learn>=1.4.0
+rouge-score>=0.1.2
