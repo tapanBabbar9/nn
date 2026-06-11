@@ -1,0 +1,3 @@
+# Baseline deps + MLflow tracking/registry
+-r ../requirements.txt
+mlflow>=2.14.0
