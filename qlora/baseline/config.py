@@ -63,7 +63,7 @@ class QLoRAConfig:
 
 @dataclass
 class TrainConfig:
-    dataset_path: str = "data/movie_reviews.jsonl"
+    dataset_path: str = "../data/movie_reviews.jsonl"
     output_dir: str = "outputs/lora-movie-reviews"
     num_train_epochs: int = 3
     per_device_train_batch_size: int = 2
@@ -94,7 +94,7 @@ class CompareConfig:
 
 @dataclass
 class EvalConfig:
-    test_path: str = "data/movie_reviews_test.jsonl"
+    test_path: str = "../data/movie_reviews_test.jsonl"
     adapter_path: str = "outputs/lora-movie-reviews"
     results_path: str = "outputs/lora-movie-reviews/eval_results.json"
     system_prompt: str = SYSTEM_PROMPT

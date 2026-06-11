@@ -173,6 +173,9 @@ venv/
 
 # Model weights & training outputs
 outputs/
+mlruns/
+mlartifacts/
+mlflow.db
 *.safetensors
 *.bin
 checkpoint-*/
